@@ -1,1 +1,1 @@
-export { getAntdThemeConfig } from "./themeConfig";
+export { getAntdThemeConfig } from "./config";

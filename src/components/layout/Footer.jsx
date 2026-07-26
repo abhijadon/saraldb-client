@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Layout, Typography, Space } from "antd";
-import { useTheme } from "@/context/ThemeContext";
+import { useTheme } from "@/context";
 
 const { Footer: AntFooter } = Layout;
 const { Text, Link } = Typography;

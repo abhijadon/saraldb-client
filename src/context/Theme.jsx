@@ -20,13 +20,11 @@ export function ThemeProvider({ children }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // 1. Check if user has explicit saved preference in localStorage
     const savedTheme = localStorage.getItem("saral_theme");
 
     if (savedTheme === "light") {
       setThemeModeState("light");
     } else {
-      // Default to Dark Mode
       setThemeModeState("dark");
       document.documentElement.classList.add("dark");
     }

@@ -16,6 +16,7 @@ import {
 } from "@ant-design/icons";
 import { useTheme, useLayout, useAuth } from "@/context";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const { Header: AntHeader } = Layout;
 const { Text } = Typography;
@@ -92,6 +93,7 @@ export function Header() {
               justifyContent: "center",
               color: "#ffffff",
               fontSize: 18,
+              boxShadow: "0 4px 12px rgba(99, 102, 241, 0.3)",
             }}
           >
             <DatabaseOutlined />

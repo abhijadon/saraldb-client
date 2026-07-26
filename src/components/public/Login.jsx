@@ -4,7 +4,7 @@ import React from "react";
 import { PublicLayout, LoginModal } from "@/components/public";
 import { useRouter } from "next/navigation";
 
-export function LoginContent() {
+export function Login() {
   const router = useRouter();
 
   return (
@@ -14,4 +14,4 @@ export function LoginContent() {
   );
 }
 
-export default LoginContent;
+export default Login;

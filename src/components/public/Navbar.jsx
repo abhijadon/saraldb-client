@@ -24,6 +24,7 @@ import {
 import { useTheme, useAuth } from "@/context";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import LoginModal from "./LoginModal";
 
 const { Header } = AntLayout;

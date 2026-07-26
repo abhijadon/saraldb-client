@@ -8,7 +8,7 @@ import { MailOutlined, EnvironmentOutlined, PhoneOutlined, SendOutlined } from "
 const { Title, Paragraph, Text } = Typography;
 const { TextArea } = Input;
 
-export function ContactContent() {
+export function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = () => {
@@ -136,4 +136,4 @@ export function ContactContent() {
   );
 }
 
-export default ContactContent;
+export default Contact;

@@ -1,11 +1,11 @@
 import React from "react";
-import BlogContent from "@/components/public/BlogContent";
+import Blog from "@/components/public/Blog";
 
 export const metadata = {
-  title: "Engineering Blog & Release Notes | SaralDB",
-  description: "Deep dives on database internals, zero-copy JSON buffers, distributed consensus, query performance benchmarks, and SaralDB release updates.",
+  title: "Blog & Engineering Insights",
+  description: "Read technical articles, release notes, benchmarks, and database engine architecture posts from the SaralDB engineering team.",
 };
 
 export default function BlogPage() {
-  return <BlogContent />;
+  return <Blog />;
 }

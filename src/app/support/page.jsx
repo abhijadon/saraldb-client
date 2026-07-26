@@ -1,11 +1,11 @@
 import React from "react";
-import SupportContent from "@/components/public/SupportContent";
+import Support from "@/components/public/Support";
 
 export const metadata = {
-  title: "Support & Help Center | SaralDB",
-  description: "Get 24/7 enterprise SLA support, ask questions in our developer community, or browse SaralDB database FAQs.",
+  title: "Support & Help Center",
+  description: "Get support for SaralDB. Community Discord, documentation guides, and 24/7 enterprise SLA support.",
 };
 
 export default function SupportPage() {
-  return <SupportContent />;
+  return <Support />;
 }

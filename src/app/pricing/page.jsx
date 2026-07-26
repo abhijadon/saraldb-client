@@ -1,11 +1,11 @@
 import React from "react";
-import PricingContent from "@/components/public/PricingContent";
+import Pricing from "@/components/public/Pricing";
 
 export const metadata = {
-  title: "Pricing Plans & Tier Comparison | SaralDB",
-  description: "Transparent MongoDB-style pricing for SaralDB. Free serverless tier, developer pro dedicated clusters, and custom high-scale enterprise deployments.",
+  title: "Pricing & Plans",
+  description: "Predictable, transparent pricing for SaralDB. Community Serverless free tier, Developer Pro, and Dedicated Enterprise Clusters.",
 };
 
 export default function PricingPage() {
-  return <PricingContent />;
+  return <Pricing />;
 }

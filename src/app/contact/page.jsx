@@ -1,11 +1,11 @@
 import React from "react";
-import ContactContent from "@/components/public/ContactContent";
+import Contact from "@/components/public/Contact";
 
 export const metadata = {
-  title: "Contact Sales & Core Engineering Team | SaralDB",
-  description: "Get in touch with the SaralDB engineering team for custom enterprise clusters, migration guidance, and SLA support.",
+  title: "Contact Us",
+  description: "Get in touch with SaralDB engineers for enterprise support, custom deployments, benchmarks, and inquiries.",
 };
 
 export default function ContactPage() {
-  return <ContactContent />;
+  return <Contact />;
 }

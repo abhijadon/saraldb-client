@@ -1,11 +1,11 @@
 import React from "react";
-import DocsContent from "@/components/public/DocsContent";
+import Docs from "@/components/public/Docs";
 
 export const metadata = {
-  title: "Documentation & API Reference | SaralDB",
-  description: "Comprehensive guides, Node.js & Python SDK reference, CLI tools, and architecture documentation for SaralDB.",
+  title: "Documentation & API Reference",
+  description: "Official documentation for SaralDB. Learn how to install, configure, query, and scale distributed database clusters.",
 };
 
 export default function DocsPage() {
-  return <DocsContent />;
+  return <Docs />;
 }

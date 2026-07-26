@@ -7,7 +7,7 @@ import { CustomerServiceOutlined, MessageOutlined, FileTextOutlined } from "@ant
 
 const { Title, Paragraph } = Typography;
 
-export function SupportContent() {
+export function Support() {
   const faqs = [
     {
       key: "1",
@@ -81,4 +81,4 @@ export function SupportContent() {
   );
 }
 
-export default SupportContent;
+export default Support;

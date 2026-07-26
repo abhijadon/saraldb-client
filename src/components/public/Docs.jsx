@@ -7,7 +7,7 @@ import { SearchOutlined, BookOutlined, RocketOutlined, CodeOutlined, SafetyCerti
 
 const { Title, Paragraph } = Typography;
 
-export function DocsContent() {
+export function Docs() {
   const categories = [
     { icon: <RocketOutlined style={{ fontSize: 24, color: "#6366f1" }} />, title: "Getting Started", desc: "Quick installation, CLI setup, and first connection." },
     { icon: <BookOutlined style={{ fontSize: 24, color: "#a855f7" }} />, title: "Core Concepts", desc: "Documents, collections, indexing, and memory architecture." },
@@ -72,4 +72,4 @@ export function DocsContent() {
   );
 }
 
-export default DocsContent;
+export default Docs;

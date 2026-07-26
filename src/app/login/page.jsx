@@ -1,11 +1,11 @@
 import React from "react";
-import LoginContent from "@/components/public/LoginContent";
+import Login from "@/components/public/Login";
 
 export const metadata = {
-  title: "Sign In to Admin Studio | SaralDB",
-  description: "Log in to your SaralDB cluster, manage collections, inspect query execution plans, and configure RBAC roles.",
+  title: "Login",
+  description: "Log in to SaralDB Admin Studio to manage databases, collections, users, and cluster performance.",
 };
 
 export default function LoginPage() {
-  return <LoginContent />;
+  return <Login />;
 }

@@ -7,7 +7,7 @@ import { SearchOutlined, CalendarOutlined, UserOutlined } from "@ant-design/icon
 
 const { Title, Paragraph, Text } = Typography;
 
-export function BlogContent() {
+export function Blog() {
   const posts = [
     {
       id: "1",
@@ -103,4 +103,4 @@ export function BlogContent() {
   );
 }
 
-export default BlogContent;
+export default Blog;

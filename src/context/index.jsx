@@ -1,13 +1,13 @@
 "use client";
 
 import React from "react";
-import { ThemeProvider } from "./ThemeContext";
-import { LayoutProvider } from "./LayoutContext";
-import { AuthProvider } from "./AuthContext";
+import { ThemeProvider } from "./Theme";
+import { LayoutProvider } from "./Layout";
+import { AuthProvider } from "./Auth";
 
-export { ThemeProvider, useTheme } from "./ThemeContext";
-export { LayoutProvider, useLayout } from "./LayoutContext";
-export { AuthProvider, useAuth } from "./AuthContext";
+export { ThemeProvider, useTheme } from "./Theme";
+export { LayoutProvider, useLayout } from "./Layout";
+export { AuthProvider, useAuth } from "./Auth";
 
 export function AppProviders({ children }) {
   return (

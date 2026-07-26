@@ -21,7 +21,7 @@ import { useAuth } from "@/context";
 
 const { Title, Paragraph, Text } = Typography;
 
-export function PricingContent() {
+export function Pricing() {
   const [billingCycle, setBillingCycle] = useState("Yearly");
   const router = useRouter();
   const { isLoggedIn } = useAuth();
@@ -214,4 +214,4 @@ export function PricingContent() {
   );
 }
 
-export default PricingContent;
+export default Pricing;
