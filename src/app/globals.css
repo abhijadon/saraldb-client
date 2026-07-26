@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-montserrat);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f172a;
+    --foreground: #f8fafc;
+  }
+}
+
+/* ==========================================================================
+   Smooth Scrolling & Custom Ultra-Thin SaralDB Theme Scrollbar
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-montserrat), "Montserrat", system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Thin & Sleek Theme Scrollbar (WebKit / Chrome / Safari / Edge) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.dark ::-webkit-scrollbar-track,
+html.dark ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6366f1;
+  border-radius: 99px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4f46e5;
+}
+
+/* Firefox Scrollbar Support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #6366f1 #f1f5f9;
+}
+
+.dark *,
+html.dark * {
+  scrollbar-color: #6366f1 #0f172a;
+}
+
+/* ==========================================================================
+   Responsive Public Header Media Query Rules
+   ========================================================================== */
+
+@media (min-width: 992px) {
+  .desktop-nav-links {
+    display: flex !important;
+  }
+  .mobile-hamburger-btn {
+    display: none !important;
+  }
+  .desktop-auth-actions {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .desktop-nav-links {
+    display: none !important;
+  }
+  .mobile-hamburger-btn {
+    display: flex !important;
+  }
+  .desktop-auth-actions {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   Ant Design Input & Webkit Autofill Override Fix (Light & Dark Mode)
+   ========================================================================== */
+
+/* AntD Input Inner & Wrapper Elements */
+.ant-input,
+.ant-input-affix-wrapper input,
+.ant-input-password input {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* Light Mode Autofill */
+html:not(.dark) input:-webkit-autofill,
+html:not(.dark) input:-webkit-autofill:hover,
+html:not(.dark) input:-webkit-autofill:focus,
+html:not(.dark) input:-webkit-autofill:active,
+html:not(.dark) textarea:-webkit-autofill {
+  -webkit-text-fill-color: #0f172a !important;
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+  box-shadow: 0 0 0px 1000px #ffffff inset !important;
+  background-color: #ffffff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Dark Mode Autofill (Targeting html.dark & .dark context & Modals) */
+html.dark input:-webkit-autofill,
+html.dark input:-webkit-autofill:hover,
+html.dark input:-webkit-autofill:focus,
+html.dark input:-webkit-autofill:active,
+html.dark input:-internal-autofill-selected,
+html.dark textarea:-webkit-autofill,
+.dark input:-webkit-autofill,
+.dark input:-webkit-autofill:hover,
+.dark input:-webkit-autofill:focus,
+.dark input:-webkit-autofill:active,
+.dark input:-internal-autofill-selected,
+.dark textarea:-webkit-autofill,
+.ant-modal-content input:-webkit-autofill {
+  -webkit-text-fill-color: #f8fafc !important;
+  -webkit-box-shadow: 0 0 0px 1000px #1e293b inset !important;
+  box-shadow: 0 0 0px 1000px #1e293b inset !important;
+  background-color: #1e293b !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Dark Mode AntD Input Affix Wrappers */
+.dark .ant-input-affix-wrapper,
+html.dark .ant-input-affix-wrapper {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+  color: #f8fafc !important;
+}
+
+.dark .ant-input,
+html.dark .ant-input {
+  color: #f8fafc !important;
+  background-color: transparent !important;
+}
+
+.dark .ant-input-affix-wrapper:hover,
+.dark .ant-input-affix-wrapper-focused,
+.dark .ant-input-affix-wrapper:focus-within,
+html.dark .ant-input-affix-wrapper:hover,
+html.dark .ant-input-affix-wrapper-focused,
+html.dark .ant-input-affix-wrapper:focus-within {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2) !important;
+}

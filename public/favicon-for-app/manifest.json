@@ -1,0 +1,20 @@
+{
+  "name": "SaralDB Database Studio",
+  "short_name": "SaralDB",
+  "icons": [
+    {
+      "src": "/favicon-for-app/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon-for-app/icon1.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0f172a",
+  "background_color": "#0f172a",
+  "display": "standalone"
+}
