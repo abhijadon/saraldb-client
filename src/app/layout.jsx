@@ -1,4 +1,6 @@
 import { Montserrat } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import { AppProviders } from "@/context";
 import "./globals.css";
 
@@ -84,6 +86,8 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${montserrat.className} min-h-full flex flex-col`}>
         <AppProviders>{children}</AppProviders>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
