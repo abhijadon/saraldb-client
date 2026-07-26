@@ -10,11 +10,28 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://www.saraldb.com"),
   title: {
     default: "SaralDB - Sub-Millisecond Distributed NoSQL Database Engine",
     template: "%s | SaralDB",
   },
   description: "Next-generation distributed document database engine with native JSON, live socket subscriptions, and built-in Admin Studio.",
+  alternates: {
+    canonical: "https://www.saraldb.com",
+  },
+  openGraph: {
+    title: "SaralDB - Sub-Millisecond Distributed NoSQL Database",
+    description: "Next-generation distributed document database engine with native JSON, live socket subscriptions, and built-in Admin Studio.",
+    url: "https://www.saraldb.com",
+    siteName: "SaralDB",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SaralDB - Sub-Millisecond Distributed NoSQL Database",
+    description: "Next-generation distributed document database engine with native JSON, live socket subscriptions, and built-in Admin Studio.",
+  },
   icons: {
     icon: [
       { url: "/favicon-for-app/favicon.ico" },
@@ -34,12 +51,36 @@ export const metadata = {
   },
 };
 
+const jsonLdSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SaralDB",
+  "operatingSystem": "All",
+  "applicationCategory": "DeveloperApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Abhishek Jadon"
+  },
+  "description": "Next-generation distributed document database engine with native JSON, live socket subscriptions, and built-in Admin Studio."
+};
+
 export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
       className={`dark ${montserrat.variable} ${montserrat.className} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchema) }}
+        />
+      </head>
       <body className={`${montserrat.className} min-h-full flex flex-col`}>
         <AppProviders>{children}</AppProviders>
       </body>

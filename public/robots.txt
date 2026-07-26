@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://saraldb.com
-
-# Sitemaps
-Sitemap: https://saraldb.com/sitemap.xml
