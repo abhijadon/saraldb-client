@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import "tailwindcss" important;
 
 :root {
   --background: #ffffff;
@@ -25,6 +25,11 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+}
+
+/* Hide default OS black mouse cursor globally across all elements */
+*, *::before, *::after, html, body, button, a, input, select, textarea, [role="button"], .ant-btn, .ant-tag {
+  cursor: none !important;
 }
 
 body {
@@ -77,9 +82,11 @@ html.dark * {
   .desktop-nav-links {
     display: flex !important;
   }
+
   .mobile-hamburger-btn {
     display: none !important;
   }
+
   .desktop-auth-actions {
     display: flex !important;
   }
@@ -89,9 +96,11 @@ html.dark * {
   .desktop-nav-links {
     display: none !important;
   }
+
   .mobile-hamburger-btn {
     display: flex !important;
   }
+
   .desktop-auth-actions {
     display: none !important;
   }

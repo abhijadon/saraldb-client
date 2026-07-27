@@ -9,11 +9,16 @@ export { ThemeProvider, useTheme } from "./Theme";
 export { LayoutProvider, useLayout } from "./Layout";
 export { AuthProvider, useAuth } from "./Auth";
 
+import { GlobalThemeCursor } from "@/components/common/GlobalThemeCursor";
+
 export function AppProviders({ children }) {
   return (
     <ThemeProvider>
       <AuthProvider>
-        <LayoutProvider>{children}</LayoutProvider>
+        <LayoutProvider>
+          <GlobalThemeCursor />
+          {children}
+        </LayoutProvider>
       </AuthProvider>
     </ThemeProvider>
   );
