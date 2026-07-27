@@ -250,7 +250,7 @@ const Hero = ({ onStart }) => {
                     {/* Right Column: Terminal Card (Height & Overflow Fixed) */}
                     <div className="lg:col-span-5 w-full">
                         <Card
-                            variant={false}
+                            variant="filled"
                             className={`rounded-xl shadow-xl overflow-hidden border transition-colors ${isDarkMode
                                 ? "bg-slate-900/90 border-slate-800"
                                 : "bg-slate-900 border-slate-800"
@@ -267,7 +267,7 @@ const Hero = ({ onStart }) => {
                                         saraldb.tx().flow()
                                     </span>
                                 </div>
-                                <Tag color="cyan" variant={false} className="m-0 text-[10px] rounded-full px-2">
+                                <Tag color="cyan" variant="filled" className="m-0 text-[10px] rounded-full px-2">
                                     ● Transaction Active
                                 </Tag>
                             </div>
