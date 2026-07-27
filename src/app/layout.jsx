@@ -15,26 +15,8 @@ const montserrat = Montserrat({
 
 export const metadata = {
   metadataBase: new URL("https://www.saraldb.com"),
-  title: {
-    default: "SaralDB - Sub-Millisecond Distributed NoSQL Database Engine",
-    template: "%s | SaralDB",
-  },
-  description: "Next-generation distributed document database engine with native JSON, live socket subscriptions, and built-in Admin Studio.",
   alternates: {
     canonical: "https://www.saraldb.com",
-  },
-  openGraph: {
-    title: "SaralDB - Sub-Millisecond Distributed NoSQL Database",
-    description: "Next-generation distributed document database engine with native JSON, live socket subscriptions, and built-in Admin Studio.",
-    url: "https://www.saraldb.com",
-    siteName: "SaralDB",
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "SaralDB - Sub-Millisecond Distributed NoSQL Database",
-    description: "Next-generation distributed document database engine with native JSON, live socket subscriptions, and built-in Admin Studio.",
   },
   icons: {
     icon: [
@@ -70,7 +52,7 @@ const jsonLdSchema = {
     "@type": "Person",
     "name": "Abhishek Jadon"
   },
-  "description": "Next-generation distributed document database engine with native JSON, live socket subscriptions, and built-in Admin Studio."
+  "description": "Flow-Based Unified State Engine combining document storage, caching, and streaming."
 };
 
 export default function RootLayout({ children }) {
