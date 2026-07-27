@@ -4,11 +4,6 @@ import {
     RocketOutlined,
     BookOutlined,
     CheckCircleFilled,
-    ThunderboltOutlined,
-    CloudServerOutlined,
-    DatabaseOutlined,
-    SafetyCertificateOutlined,
-    ArrowUpOutlined,
 } from '@ant-design/icons';
 import { useTheme } from '@/context';
 
@@ -150,15 +145,13 @@ const Hero = ({ onStart }) => {
 
     return (
         <Layout
-            className={`relative py-8 sm:py-12 flex flex-col items-center transition-colors duration-300 overflow-hidden ${
-                isDarkMode ? "bg-slate-950 text-slate-100" : "bg-slate-50 text-slate-900"
-            }`}
+            className={`relative py-8 sm:py-12 flex flex-col items-center transition-colors duration-300 overflow-hidden ${isDarkMode ? "bg-slate-950 text-slate-100" : "bg-slate-50 text-slate-900"
+                }`}
         >
             {/* 1. Base Subtle Square Grid Overlay */}
             <div
-                className={`absolute inset-0 pointer-events-none transition-opacity duration-500 ${
-                    isDarkMode ? "opacity-20" : "opacity-30"
-                }`}
+                className={`absolute inset-0 pointer-events-none transition-opacity duration-500 ${isDarkMode ? "opacity-20" : "opacity-30"
+                    }`}
                 style={{
                     backgroundImage: isDarkMode
                         ? `linear-gradient(to right, rgba(255, 255, 255, 0.12) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.12) 1px, transparent 1px)`
@@ -177,34 +170,31 @@ const Hero = ({ onStart }) => {
                     <div className="lg:col-span-7 flex flex-col items-start gap-4">
                         {/* Badge */}
                         <Tag
-                            className={`px-2.5 py-0.5 rounded-full text-xs font-semibold flex items-center m-0 border transition-colors ${
-                                isDarkMode
-                                    ? "bg-blue-950/60 border-blue-800/60 text-blue-400"
-                                    : "bg-blue-50 border-blue-200 text-blue-700"
-                            }`}
+                            className={`px-2.5 py-0.5 rounded-full text-xs font-semibold flex items-center m-0 border transition-colors ${isDarkMode
+                                ? "bg-blue-950/60 border-blue-800/60 text-blue-400"
+                                : "bg-blue-50 border-blue-200 text-blue-700"
+                                }`}
                         >
                             <span className="inline-block w-2 h-2 rounded-full bg-blue-500 mr-2 animate-pulse" />
-                            Redis + Kafka + MongoDB + SQL — All-In-One Engine
+                            SaralDB v0.1 — Flow-Based State Engine
                         </Tag>
 
                         <h1
-                            className={`font-bold text-2xl sm:text-4xl leading-tight m-0 tracking-tight ${
-                                isDarkMode ? "text-white" : "text-slate-900"
-                            }`}
+                            className={`font-bold text-2xl sm:text-4xl leading-tight m-0 tracking-tight ${isDarkMode ? "text-white" : "text-slate-900"
+                                }`}
                         >
-                            Stop Writing Backend APIs. <br />
-                            <span className="bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent font-extrabold text-2xl sm:text-4xl">
-                                Connect Direct From Frontend.
+                            No CRUD. No Complex APIs. <br />
+                            <span className="bg-linear-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent font-extrabold text-2xl sm:text-4xl">
+                                Everything is a Flow.
                             </span>
                         </h1>
 
                         {/* Description */}
                         <p
-                            className={`text-base leading-relaxed m-0 ${
-                                isDarkMode ? "text-slate-400" : "text-slate-600"
-                            }`}
+                            className={`text-base leading-relaxed m-0 ${isDarkMode ? "text-slate-400" : "text-slate-600"
+                                }`}
                         >
-                            SaralDB unifies in-memory caching, real-time event streaming, document storage, and structured SQL into a single ultra-fast engine. Build apps directly from React or Next.js with secure Row-Level Security (RLS).
+                            SaralDB unifies document storage, in-memory performance, and real-time event streaming under a single <code className="bg-blue-500/10 text-blue-500 px-1.5 py-0.5 rounded font-mono text-sm">.flow()</code> abstraction. Query, stream, and commit atomic transactions without managing separate DB, cache, or message brokers.
                         </p>
 
                         {/* Action Buttons */}
@@ -221,35 +211,32 @@ const Hero = ({ onStart }) => {
                             <Button
                                 size="large"
                                 icon={<BookOutlined />}
-                                className={`h-10 px-5 rounded-lg text-sm font-semibold transition-colors ${
-                                    isDarkMode
-                                        ? "border-slate-800 text-slate-300 hover:text-blue-400 hover:border-blue-500 bg-slate-900/50"
-                                        : "border-slate-300 text-slate-700 hover:text-blue-600 hover:border-blue-500 bg-white"
-                                }`}
+                                className={`h-10 px-5 rounded-lg text-sm font-semibold transition-colors ${isDarkMode
+                                    ? "border-slate-800 text-slate-300 hover:text-blue-400 hover:border-blue-500 bg-slate-900/50"
+                                    : "border-slate-300 text-slate-700 hover:text-blue-600 hover:border-blue-500 bg-white"
+                                    }`}
                             >
-                                View Documentation
+                                View Specs & Docs
                             </Button>
                         </div>
 
                         {/* Tech Highlights */}
                         <div
-                            className={`pt-4 border-t mt-1 w-full transition-colors ${
-                                isDarkMode ? "border-slate-800/80" : "border-slate-200"
-                            }`}
+                            className={`pt-4 border-t mt-1 w-full transition-colors ${isDarkMode ? "border-slate-800/80" : "border-slate-200"
+                                }`}
                         >
                             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                                 {[
-                                    "Direct SDK Setup",
-                                    "Sub-1ms Latency",
-                                    "Pub/Sub & Queues",
-                                    "Native JSON & SQL"
+                                    "Log-First Internal Engine",
+                                    "Git-Style Flow Logic",
+                                    "Atomic Transactions",
+                                    "Zero External Cache"
                                 ].map((feature, i) => (
                                     <div key={i} className="flex items-center gap-1.5">
                                         <CheckCircleFilled className="text-blue-500 text-xs" />
                                         <span
-                                            className={`text-xs font-medium ${
-                                                isDarkMode ? "text-slate-400" : "text-slate-500"
-                                            }`}
+                                            className={`text-xs font-medium ${isDarkMode ? "text-slate-400" : "text-slate-500"
+                                                }`}
                                         >
                                             {feature}
                                         </span>
@@ -260,73 +247,87 @@ const Hero = ({ onStart }) => {
 
                     </div>
 
-                    {/* Right Column: Terminal Card */}
+                    {/* Right Column: Terminal Card (Height & Overflow Fixed) */}
                     <div className="lg:col-span-5 w-full">
                         <Card
-                            bordered={false}
-                            className={`rounded-xl shadow-xl overflow-hidden border transition-colors ${
-                                isDarkMode
-                                    ? "bg-slate-900/90 border-slate-800"
-                                    : "bg-slate-900 border-slate-800"
-                            }`}
-                            styles={{ body: { padding: 16 } }}
+                            variant={false}
+                            className={`rounded-xl shadow-xl overflow-hidden border transition-colors ${isDarkMode
+                                ? "bg-slate-900/90 border-slate-800"
+                                : "bg-slate-900 border-slate-800"
+                                }`}
+                            styles={{ body: { padding: 12 } }}
                         >
                             {/* Card Header */}
-                            <div className="flex justify-between items-center pb-2.5 mb-3 border-b border-slate-800">
+                            <div className="flex justify-between items-center pb-2 mb-2 border-b border-slate-800">
                                 <div className="flex items-center gap-1.5">
                                     <span className="w-2.5 h-2.5 rounded-full bg-red-500 inline-block" />
                                     <span className="w-2.5 h-2.5 rounded-full bg-yellow-500 inline-block" />
                                     <span className="w-2.5 h-2.5 rounded-full bg-green-500 inline-block" />
                                     <span className="text-slate-400 text-xs ml-2 font-mono">
-                                        SaralDB Admin Studio
+                                        saraldb.tx().flow()
                                     </span>
                                 </div>
-                                <Tag color="success" bordered={false} className="m-0 text-[10px] rounded-full px-2">
-                                    ● Cluster Online
+                                <Tag color="cyan" variant={false} className="m-0 text-[10px] rounded-full px-2">
+                                    ● Transaction Active
                                 </Tag>
                             </div>
 
                             {/* Metrics Grid */}
-                            <div className="grid grid-cols-2 gap-2.5 mb-3">
-                                <div className="bg-slate-800/60 p-2 rounded-lg border border-slate-700/50">
-                                    <span className="text-[10px] text-slate-400 block uppercase font-sans">
-                                        Query Latency
+                            <div className="grid grid-cols-2 gap-2 mb-2">
+                                <div className="bg-slate-800/60 p-1.5 px-2 rounded-lg border border-slate-700/50">
+                                    <span className="text-[9px] text-slate-400 block uppercase font-sans">
+                                        Execution Pipeline
                                     </span>
                                     <span className="text-xs font-bold text-[#60a5fa] font-mono">
-                                        0.3 ms
+                                        .flow() Engine
                                     </span>
                                 </div>
-                                <div className="bg-slate-800/60 p-2 rounded-lg border border-slate-700/50">
-                                    <span className="text-[10px] text-slate-400 block uppercase font-sans">
-                                        Active Engine
+                                <div className="bg-slate-800/60 p-1.5 px-2 rounded-lg border border-slate-700/50">
+                                    <span className="text-[9px] text-slate-400 block uppercase font-sans">
+                                        System State
                                     </span>
                                     <span className="text-xs font-bold text-emerald-400 font-mono">
-                                        Hybrid (NoSQL + Cache)
+                                        Log-First / Derived
                                     </span>
                                 </div>
                             </div>
 
-                            {/* Terminal Output */}
-                            <div className="bg-slate-950 p-3 rounded-lg border border-slate-800 font-mono text-xs">
-                                <span className="text-slate-500 text-[10px] block mb-1.5 font-sans">
-                                    /* Direct Client Query Output */
+                            {/* Terminal Output Section - Height Constrained with Internal Scroll */}
+                            <div className="bg-slate-950 p-2.5 rounded-lg border border-slate-800 font-mono max-h-75 sm:max-h-85 overflow-y-auto">
+                                <span className="text-slate-500 text-[10px] block mb-1 font-sans">
+                                    /* Atomic Lead Creation & Validation (Git-Style Flow) */
                                 </span>
-                                <pre className="text-slate-300 m-0 leading-relaxed overflow-x-auto text-[11px]">
-                                    {`const db = new SaralClient({ endpoint: "client" });
+                                <pre className="text-blue-300 m-0 leading-relaxed text-[10px] sm:text-[11px] whitespace-pre-wrap">
+                                    {`await saraldb.tx()
+  .flow(async tx => {
+    // Fetch state using .pull()
+    const course = await tx.courses.pull(courseId);
 
-const user = await db.collection("users").find({
-  _id: "usr_991",
-  status: "Active"
-});`}
-                                </pre>
-                                <div className="border-t border-slate-800 my-2" />
-                                <pre className="text-blue-300 m-0 leading-relaxed overflow-x-auto text-[11px]">
-                                    {`{
-  "_id": "usr_991",
-  "name": "Abhishek",
-  "role": "SuperAdmin",
-  "cache_hit": true
-}`}
+    // Query using .when()
+    const dup = await tx.leads.when(l => 
+      l.email === email || l.phone === formattedPhone
+    );
+
+    if (dup?.course?.category === course.category) {
+      throw new Error("Duplicate lead category");
+    }
+
+    const stage = await tx.stages.when("New Leads");
+
+    // Create entry using .push()
+    const lead = await tx.leads.push({
+      ...req.body,
+      phone: formattedPhone,
+      stage: stage.id
+    });
+
+    // Append log event using .push()
+    await tx.leadHistory.push({
+      lead: lead.id,
+      event: "lead_created"
+    });
+  })
+  .commit();`}
                                 </pre>
                             </div>
                         </Card>
